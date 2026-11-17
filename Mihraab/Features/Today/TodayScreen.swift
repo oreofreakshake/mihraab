@@ -20,8 +20,7 @@ struct TodayScreen: View {
                 prayer: prayer,
                 date: date,
                 isNext: prayer == next,
-                isCurrent: prayer == current,
-                isPast: live && date <= now && prayer != current
+                isCurrent: prayer == current
               )
             }
 

@@ -23,7 +23,7 @@ struct PrayerTimelineProvider: TimelineProvider {
       for offset in 0...1 {
         let day = Calendar.maldives.date(byAdding: .day, value: offset, to: now)!
         guard let schedule = Timetable.shared.schedule(for: island, on: day) else { continue }
-        dates += Prayer.allCases.map(schedule.time(of:)).filter { $0 > now }
+        dates += ([schedule.day] + Prayer.allCases.map(schedule.time(of:))).filter { $0 > now }
       }
     }
 

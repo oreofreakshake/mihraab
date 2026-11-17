@@ -5,7 +5,6 @@ struct SkyCard: View {
   let date: Date
   let isNext: Bool
   let isCurrent: Bool
-  let isPast: Bool
 
   private var scene: SkyScene { .for(prayer) }
 
@@ -46,7 +45,6 @@ struct SkyCard: View {
     .overlay {
       shape.strokeBorder(.white.opacity(isNext ? 0.6 : 0.08), lineWidth: isNext ? 1.5 : 1)
     }
-    .saturation(isPast ? 0.5 : 1)
     .accessibilityElement(children: .combine)
   }
 
@@ -73,7 +71,7 @@ struct SkyCard: View {
     let gradient = LinearGradient(colors: scene.colors, startPoint: .top, endPoint: .bottom)
 
     if scene.stars > 0 {
-      TimelineView(.animation(minimumInterval: 1 / 30, paused: isPast)) { context in
+      TimelineView(.animation(minimumInterval: 1 / 30)) { context in
         gradient.overlay {
           StarField(count: scene.stars, seed: prayer.rawValue, time: context.date.timeIntervalSinceReferenceDate)
         }
