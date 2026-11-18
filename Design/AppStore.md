@@ -56,7 +56,7 @@ salat,namaz,prayer,times,maldives,dhivehi,islam,muslim,fajr,isha,adhan,azan,mosq
 - **Secondary category:** Reference
 - **Support URL:** https://github.com/oreofreakshake/mihraab
 - **Privacy policy URL:** https://github.com/oreofreakshake/mihraab/blob/main/PRIVACY.md
-- **Copyright:** 2026 <your legal name>
+- **Copyright:** 2026 Yazak
 - **Age rating:** 4+
 - **App Privacy:** Data Not Collected
 
